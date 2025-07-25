@@ -1,5 +1,5 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+"use client";
+import React, { useEffect, useState } from "react";
 import { FileUpload } from "@/components/ui/file-upload";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ButtonAnimated } from "@/components/ui/stateful-button";
@@ -93,7 +93,10 @@ const HeroSection = () => {
           }}
           className="flex items-center justify-center mt-10"
         >
-          <Textarea placeholder="Paste the job description here" className="h-48"/>
+          <Textarea
+            placeholder="Paste the job description here"
+            className="h-48"
+          />
         </motion.div>
         <motion.div
           initial={{
@@ -114,7 +117,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
