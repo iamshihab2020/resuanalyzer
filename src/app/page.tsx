@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/ui/file-upload";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ButtonAnimated } from "@/components/ui/stateful-button";
+import { Textarea } from "@/components/ui/textarea";
 import { motion } from "motion/react";
 
 export default function Home() {
@@ -88,7 +89,23 @@ export default function Home() {
               }}
               className="flex items-center justify-center mt-10"
             >
-              {/* <Button variant={'default'} className="w-24 px-10 py-4">Analyze</Button> */}
+              <Textarea placeholder="Paste the job description here" className="h-48"/>
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.3,
+                delay: 1.2,
+              }}
+              className="flex items-center justify-center mt-10"
+            >
               <ButtonAnimated>Analyze</ButtonAnimated>
             </motion.div>
           </div>
