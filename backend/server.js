@@ -6,6 +6,9 @@ import morgan from "morgan";
 import { securityMiddleware } from "./config/security.js";
 import { connectDB } from "./config/db.js";
 
+import apiRoutes from "./routes/api.js";
+import errorHandler from "./utils/errorHandler.js";
+
 dotenv.config();
 
 const app = express();
@@ -30,10 +33,10 @@ securityMiddleware(app);
 connectDB();
 
 // Routes
-// app.use("/api", apiRoutes);
+app.use("/api", apiRoutes);
 
 // Error handling
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.get("/", (req, res) => {
   res.send("Server is running!");
